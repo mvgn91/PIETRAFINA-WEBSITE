@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +15,9 @@
     <a href="https://wa.me/523331050996?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20piedra%20natural" 
        class="whatsapp-float" 
        target="_blank" 
-       aria-label="Contactar por WhatsApp"></a>
+       aria-label="Contactar por WhatsApp">
+       <i class='bx bxl-whatsapp'></i>
+    </a>
 
     <!-- Header -->
     <header id="header" class="header">
@@ -24,7 +27,6 @@
                     <img src="https://static.wixstatic.com/media/769a0c_8d5b9317c0a84f4f856798df627db1e2~mv2.jpg/v1/fill/w_83,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20NEGRO%20DEF_edited.jpg" alt="Pietra Fina Logo" class="logo-img">
                     <div class="logo-text">
                         <h1 class="company-name">PIETRA FINA</h1>
-                        <div class="logo-divider"></div>
                     </div>
                 </div>
                 
@@ -69,22 +71,22 @@
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <strong>Teléfono:</strong>
+                            <strong><i class='bx bx-phone'></i> Teléfono:</strong>
                             <span>333 105 0996</span>
                         </div>
                         <div class="contact-item">
-                            <strong>Dirección:</strong>
+                            <strong><i class='bx bx-map'></i> Dirección:</strong>
                             <span>Mariano Otero 5050-A<br>Guadalajara, Jalisco, México</span>
                         </div>
                         <div class="contact-item">
-                            <strong>Horarios:</strong>
+                            <strong><i class='bx bx-time'></i> Horarios:</strong>
                             <span>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 2:00 PM</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Envíanos un Mensaje</h3>
+                    <h3><i class='bx bx-envelope'></i> Envíanos un Mensaje</h3>
                     <form id="contact-form">
                         <div class="form-group">
                             <input type="text" name="nombre" placeholder="Nombre completo" required>
@@ -108,14 +110,17 @@
                         <div class="form-group">
                             <textarea name="mensaje" placeholder="Describe tu proyecto" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary full-width">ENVIAR CONSULTA</button>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <i class='bx bx-send'></i>
+                            ENVIAR CONSULTA
+                        </button>
                     </form>
                 </div>
             </div>
 
             <!-- Map Section -->
             <div class="map-section">
-                <h3>Nuestra Ubicación</h3>
+                <h3><i class='bx bx-map-pin'></i> Nuestra Ubicación</h3>
                 <div class="map-container">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.8234567890123!2d-103.3456789!3d20.6789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae8b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sMariano%20Otero%205050-A%2C%20Guadalajara%2C%20Jalisco%2C%20Mexico!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
@@ -129,6 +134,7 @@
                 </div>
                 <div class="map-link">
                     <a href="https://maps.app.goo.gl/eHd98qSpNr9fjQCD7" target="_blank" class="btn btn-outline">
+                        <i class='bx bx-map'></i>
                         VER EN GOOGLE MAPS
                     </a>
                 </div>
@@ -144,9 +150,9 @@
                     <h3>PIETRA FINA</h3>
                     <p>Transformando espacios con la elegancia atemporal de la piedra natural.</p>
                     <div class="footer-contact">
-                        <p>TEL: 333 105 0996</p>
-                        <p>MARIANO OTERO 5050-A</p>
-                        <p>GUADALAJARA, JALISCO, MÉXICO</p>
+                        <p><i class='bx bx-phone'></i> TEL: 333 105 0996</p>
+                        <p><i class='bx bx-map'></i> MARIANO OTERO 5050-A</p>
+                        <p><i class='bx bx-map-pin'></i> GUADALAJARA, JALISCO, MÉXICO</p>
                     </div>
                 </div>
                 
@@ -154,21 +160,23 @@
                     <h4>Síguenos</h4>
                     <div class="social-links">
                         <a href="https://www.facebook.com/pietrafina.mx/" target="_blank" class="social-link facebook" aria-label="Facebook">
-                            📘
+                            <i class='bx bxl-facebook'></i>
                         </a>
                         <a href="https://www.instagram.com/pietrafinamx/" target="_blank" class="social-link instagram" aria-label="Instagram">
-                            📷
+                            <i class='bx bxl-instagram'></i>
                         </a>
                     </div>
                     
                     <div class="footer-downloads">
                         <h4>Descargas</h4>
                         <div class="download-links">
-                            <a href="https://bit.ly/4kj5TnW" target="_blank" class="download-link">
-                                📖 Lookbook de Obras
+                            <a href="https://bit.ly/4kj5TnW" target="_blank" class="download-link btn-red">
+                                <i class='bx bx-book-open'></i>
+                                Lookbook de Obras
                             </a>
-                            <a href="https://bit.ly/3IbX56b" target="_blank" class="download-link">
-                                📋 Catálogo de Productos
+                            <a href="https://bit.ly/3IbX56b" target="_blank" class="download-link btn-red">
+                                <i class='bx bx-file-blank'></i>
+                                Catálogo de Productos
                             </a>
                         </div>
                     </div>
