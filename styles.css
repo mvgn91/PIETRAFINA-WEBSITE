@@ -232,16 +232,20 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 0;
 }
 
+/* HEADER Y NAVEGACIÓN CENTRADA */
 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .logo-img {
@@ -269,26 +273,31 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-link {
     text-decoration: none;
     color: #374151;
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 1rem;
     letter-spacing: 0.025em;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 6px;
+    text-align: center;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: #dc2626;
-    background-color: rgba(220, 38, 38, 0.05);
+    background-color: rgba(220, 38, 38, 0.08);
 }
 
 /* Mobile Menu */
@@ -1401,4 +1410,48 @@ img.loaded {
 *:focus-visible {
     outline: 2px solid #dc2626;
     outline-offset: 2px;
+}
+
+/* TÍTULOS CENTRADOS */
+.timeline-header, .anniversary-banner, .timeline-title, .timeline-subtitle, .timeline-stats {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-title {
+    width: 100%;
+    display: block;
+}
+
+/* OBRAS CENTRADAS Y VISIBLES */
+.works-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.work-item {
+    width: 100%;
+    max-width: 950px;
+}
+
+@media (max-width: 1100px) {
+    .work-item {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        gap: 0.2rem;
+    }
+    .nav-menu {
+        gap: 1.2rem;
+    }
+    .work-item {
+        max-width: 100vw;
+    }
 }
