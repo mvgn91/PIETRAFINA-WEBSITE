@@ -429,7 +429,7 @@
 
             <div class="works-grid">
                 <!-- Obra 1 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -466,7 +466,7 @@
                 </div>
 
                 <!-- Obra 2 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -503,7 +503,7 @@
                 </div>
 
                 <!-- Obra 3 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -540,7 +540,7 @@
                 </div>
 
                 <!-- Obra 4 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -577,7 +577,7 @@
                 </div>
 
                 <!-- Obra 5 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -614,7 +614,7 @@
                 </div>
 
                 <!-- Obra 6 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -651,7 +651,7 @@
                 </div>
 
                 <!-- Obra 7 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -688,7 +688,7 @@
                 </div>
 
                 <!-- Obra 8 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -725,7 +725,7 @@
                 </div>
 
                 <!-- Obra 9 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -762,7 +762,7 @@
                 </div>
 
                 <!-- Obra 10 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -799,7 +799,7 @@
                 </div>
 
                 <!-- Obra 11 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -836,7 +836,7 @@
                 </div>
 
                 <!-- Obra 12 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -873,7 +873,7 @@
                 </div>
 
                 <!-- Obra 13 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -910,7 +910,7 @@
                 </div>
 
                 <!-- Obra 14 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -947,7 +947,7 @@
                 </div>
 
                 <!-- Obra 15 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -984,7 +984,7 @@
                 </div>
 
                 <!-- Obra 16 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -1021,7 +1021,7 @@
                 </div>
 
                 <!-- Obra 17 -->
-                <div class="work-item">
+                <div class="work-item slide-in-left">
                     <div class="work-content">
                         <div class="work-image">
                             <div class="work-image-placeholder">
@@ -1058,7 +1058,7 @@
                 </div>
 
                 <!-- Obra 18 -->
-                <div class="work-item">
+                <div class="work-item slide-in-right">
                     <div class="work-content">
                         <div class="work-info">
                             <div class="work-year">
@@ -1154,7 +1154,7 @@
             document.getElementById('scrollProgress').style.width = scrollPercent + '%';
         });
 
-        // Works Animation SOLO cuando el DOM esté listo
+        // Works Animation reversible
         function showWorksOnScroll() {
             const observerOptions = {
                 threshold: 0.2,
@@ -1164,6 +1164,8 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
                     }
                 });
             }, observerOptions);
