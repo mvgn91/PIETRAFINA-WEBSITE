@@ -1154,23 +1154,37 @@
             document.getElementById('scrollProgress').style.width = scrollPercent + '%';
         });
 
-        // Works Animation
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+        // Works Animation SOLO cuando el DOM esté listo
+        function showWorksOnScroll() {
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.work-item').forEach(item => {
+                observer.observe(item);
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.work-item').forEach(item => {
-            observer.observe(item);
-        });
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showWorksOnScroll);
+        } else {
+            showWorksOnScroll();
+        }
+        // Fallback: si después de 1s no hay ninguna visible, mostrar todas
+        setTimeout(() => {
+            const visibles = document.querySelectorAll('.work-item.visible');
+            if (visibles.length === 0) {
+                document.querySelectorAll('.work-item').forEach(item => {
+                    item.classList.add('visible');
+                });
+            }
+        }, 1000);
 
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
